@@ -1,0 +1,14 @@
+<h1>Answer page</h1>
+
+<h2>You say :</h2>
+<h3><%= params[:answer] %></h3>
+
+
+<h2>Coach says : </h2>
+<% if params[:answer] == 'I am going to work' %>
+    <em><p>Great!</p></em>
+  <% elsif params[:answer].split('').include?("?") %>
+    <em><p>Silly question, get dressed and go to work!</p></em>
+  <% else %>
+  <em><p>I don't care, get dressed and go to work!</p></em>
+<% end %>
